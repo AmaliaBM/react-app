@@ -5,6 +5,8 @@ import HomePage from './components/HomePage'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Myproductdata from './data/Myproductdata.json'
+import List from './components/List'
+import ListItem from './components/ListItem'
 function App() {
   
 
@@ -15,6 +17,8 @@ function App() {
        < HomePage/>
        < Navbar/>
        < Sidebar/>
+       < List />
+       <ListItem />
 
        <li> < Myproductdata/> </li>
       </div>
