@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    
+}
+.memebers-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 12px;
+}
+
+.members {
+    display: flex;
+    gap: 12px;
+}
+
+.member-image{
+    width: 70px;
+    object-fit: cover;
+}
+
+.amalia {
+    display: flex;
+    flex-direction: column;
+}
+
+.alba{
+    display: flex;
+    flex-direction: column;
+}

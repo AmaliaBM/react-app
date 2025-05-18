@@ -1,0 +1,31 @@
+.formulario-agregar-producto {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: antiquewhite;
+
+}
+
+.titulo-formulario {
+    font-size: 20px;
+    text-align: center;
+}
+
+.contenido-formulario {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.add-button {
+    display: flex;
+    background-color: rgb(180, 228, 229);
+    padding: 5px;
+    border: 0.5px solid black;
+}

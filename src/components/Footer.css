@@ -1,0 +1,13 @@
+.footer {
+    border: 2px solid orangered;
+    display:flex;
+    position: relative;
+    justify-content: center;
+    background-color: bisque;
+    color: black;
+    
+}
+
+.footer-link {
+    color: black;
+}

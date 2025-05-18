@@ -1,0 +1,22 @@
+.nav-bar {
+    border: 3px solid orangered;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-logo {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.titulo {
+    font-size: 30px;
+    text-align: center;
+    
+ 
+}

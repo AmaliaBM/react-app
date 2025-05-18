@@ -1,0 +1,26 @@
+.list-style{
+    border-bottom: 1px solid rgb(106, 104, 104);
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+}
+.list-image{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.list {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.delete-button { 
+    border: 1px solid black;
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    background-color: rgb(116, 209, 245);
+}
