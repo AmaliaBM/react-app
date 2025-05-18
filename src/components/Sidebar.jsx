@@ -1,7 +1,3 @@
-
-
-
-
 function Sidebar (){
     return (
         <div>Probando Sidebar</div>

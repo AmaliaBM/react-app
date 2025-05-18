@@ -1,8 +1,9 @@
 
+import logo from "./../assets/images/7938741.jpg";
 
 function Navbar (){
     return (
-        <div>Probando Navbar</div>
+        <nav>Nombre de la aplicación y <img src={logo} /> </nav>
 
     )
 }

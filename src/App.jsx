@@ -1,32 +1,38 @@
-
 import './App.css'
-import AppList from './components/AppList'
-import HomePage from './components/HomePage'
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
-import Myproductdata from './data/Myproductdata.json'
-import List from './components/List'
-import ListItem from './components/ListItem'
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Footer from "./components/Footer";
+
+import DashboardPage from './pages/DashboardPage';
+import AboutPage from './pages/AboutPage';
+import ItemDetailsPage from './pages/ItemDetailsPage';
+
+import NotFoundPage from './pages/NotFoundPage';
+
+import { Routes, Route } from "react-router-dom";
+
+import { useState } from "react";
+
+import productsData from './data/Myproductdata.json'
+
+
 function App() {
-  
+  const [ allProducts, setAllProducts ] = useState(productsData);
 
   return (
-    <>
-      <div>
-       <  AppList/>
-       < HomePage/>
-       < Navbar/>
-       < Sidebar/>
-       < List />
-       <ListItem />
+    <div>
+      <Navbar />
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<DashboardPage productos={allProducts} setAllProducts={setAllProducts} />} /> 
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/item-details/:id" element={<ItemDetailsPage />} />
 
-       <li> < Myproductdata/> </li>
-      </div>
-      <p className="read-the-docs">
-      
-      </p>
-    </>
-  )
+        <Route path="*" element={ <NotFoundPage /> } />
+      </Routes>
+      <Footer />
+    </div>
+    )
 }
 
 export default App

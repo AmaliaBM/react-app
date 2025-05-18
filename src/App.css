@@ -5,3 +5,13 @@
   text-align: center;
 }
 
+nav {
+  position: relative;
+  z-index: 20;
+
+}
+
+nav img{
+  max-width: 40px;
+}
+
