@@ -7,6 +7,9 @@ function Sidebar() {
       <Link to="/" className="sidebar-content">
         Home
       </Link>
+       <Link to="/product-management" className="sidebar-content">
+        Product Management
+      </Link>
       <Link to="/about" className="sidebar-content">
         About page
       </Link>

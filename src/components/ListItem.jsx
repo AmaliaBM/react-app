@@ -1,4 +1,5 @@
 import "./ListItem.css";
+import { Link } from "react-router-dom";
 
 function ListItem({ producto, onDelete }) {
   return (
@@ -34,10 +35,15 @@ function ListItem({ producto, onDelete }) {
         {/*condicional booleano */}
         <br />
         {/*Añade separación entre elementos de una lista, es un elemento HTML que se utiliza para crear un salto de línea en el texto. Esencialmente, hace que el texto se desplace a la siguiente línea, como si se presionara la tecla Enter en un editor de texto */}
-        <button className="delete-button" onClick={onDelete}>
+        <button className="action-button" onClick={onDelete}>
           Eliminar
         </button>
         {/*botón borrar */}
+        <Link to={`/item-details/${producto.id}`}>
+          <button className="action-button" >
+            Editar
+          </button>
+        </Link>
       </div>
     </li>
   );

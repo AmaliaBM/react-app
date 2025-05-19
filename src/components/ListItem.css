@@ -17,7 +17,7 @@
     gap: 3px;
 }
 
-.delete-button { 
+.action-button { 
     border: 1px solid black;
     display: flex;
     width: fit-content;
