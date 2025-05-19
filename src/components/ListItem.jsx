@@ -10,12 +10,25 @@ function ListItem({ producto, onDelete }) {
         <strong>{producto.title}</strong> Precio: ${producto.price}{" "}
         {/*Accedemos al nombre de cada producto, es dinámico*/}
         <br />
-        {producto.price > 1500
-          ? "Gama alta"
-          : producto.price > 500
-          ? "Gama media"
-          : "Gama baja"}
-        {/*Comparamos precio, esta es una fórmula condicional de comparación con operador ternario, ejercicio 2 punto 2.*/}
+        {
+          // Clasificación por categoría con operador ternario
+          producto.category === "beauty" || producto.category === "fragances"
+            ? "Cuidado personal"
+            : producto.category === "furniture" ||
+              producto.category === "home-decoration"
+            ? "Hogar y decoración"
+            : producto.category === "groceries" ||
+              producto.category === "kitchen-accesories"
+            ? "Supermercado "
+            : producto.category === "laptops" ||
+              producto.category === "mobile-accesories"
+            ? "Tecnología"
+            : producto.category === "mens-shirts" ||
+              producto.category === "mens-shoes" ||
+              producto.category === "mens-watches"
+            ? "Moda y joyería masculina"
+            : "Otros"
+        }
         <br />
         {producto.stock > 0 ? "✔️ Disponible" : "❌ Sin Stock"}{" "}
         {/*condicional booleano */}
