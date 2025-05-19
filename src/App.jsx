@@ -36,7 +36,7 @@ function App() {
           />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/product-management" element={<ProductManagementPage setAllProducts={setAllProducts} />} />
-          <Route path="/item-details/:id" element={<ItemDetailsPage />} />
+          <Route path="/item-details/:id" element={<ItemDetailsPage setAllProducts={setAllProducts} />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>

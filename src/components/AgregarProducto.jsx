@@ -1,13 +1,12 @@
 import { useState } from "react";
 import "./AgregarProducto.css";
 function AgregarProducto(props) {
-  const [titleInputValue, setTitleInputValue] = useState("");
-  const [descriptionInputValue, setDescriptionInputValue] = useState("");
-  const [categoryInputValue, setCategoryInputValue] = useState("");
-  const [priceInputValue, setPriceInputValue] = useState(0);
-  const [discountPercentageInputValue, setDiscountPercentageInputValue] =
-    useState(0);
-  const [stockInputValue, setStockInputValue] = useState(0);
+  const [titleInputValue, setTitleInputValue] = useState(props.product ? props.product.title : "");
+  const [descriptionInputValue, setDescriptionInputValue] = useState(props.product ? props.product.description : "");
+  const [categoryInputValue, setCategoryInputValue] = useState(props.product ? props.product.category : "");
+  const [priceInputValue, setPriceInputValue] = useState(props.product ? props.product.price : 0);
+  const [discountPercentageInputValue, setDiscountPercentageInputValue] = useState(props.product ? props.product.discountPercentage : 0);
+  const [stockInputValue, setStockInputValue] = useState(props.product ? props.product.stock : 0);
 
   const handleTitleChange = (event) => {
     setTitleInputValue(event.target.value);
