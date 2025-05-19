@@ -116,8 +116,11 @@ function AgregarProducto(props) {
             value={stockInputValue}
           />
         </div>
-
+        {/*if props.product */}
+        {/*botones editar y cancelar, editar actualiza elemento y cancelar vuelve al dashboard por ejemplo, ¿cómo se hace esto? ahhh sorpresa...*/}
+        {/*else*/}
         <button type="submit" className="add-button">Add</button>
+        {/* end IF */}
       </form>
     </div>
   );
