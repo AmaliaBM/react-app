@@ -1,12 +1,24 @@
 import { useState } from "react";
 import "./AgregarProducto.css";
+
 function AgregarProducto(props) {
-  const [titleInputValue, setTitleInputValue] = useState(props.product ? props.product.title : "");
-  const [descriptionInputValue, setDescriptionInputValue] = useState(props.product ? props.product.description : "");
-  const [categoryInputValue, setCategoryInputValue] = useState(props.product ? props.product.category : "");
-  const [priceInputValue, setPriceInputValue] = useState(props.product ? props.product.price : 0);
-  const [discountPercentageInputValue, setDiscountPercentageInputValue] = useState(props.product ? props.product.discountPercentage : 0);
-  const [stockInputValue, setStockInputValue] = useState(props.product ? props.product.stock : 0);
+  const [titleInputValue, setTitleInputValue] = useState(
+    props.product ? props.product.title : ""
+  );
+  const [descriptionInputValue, setDescriptionInputValue] = useState(
+    props.product ? props.product.description : ""
+  );
+  const [categoryInputValue, setCategoryInputValue] = useState(
+    props.product ? props.product.category : ""
+  );
+  const [priceInputValue, setPriceInputValue] = useState(
+    props.product ? props.product.price : 0
+  );
+  const [discountPercentageInputValue, setDiscountPercentageInputValue] =
+    useState(props.product ? props.product.discountPercentage : 0);
+  const [stockInputValue, setStockInputValue] = useState(
+    props.product ? props.product.stock : 0
+  );
 
   const handleTitleChange = (event) => {
     setTitleInputValue(event.target.value);
@@ -43,13 +55,28 @@ function AgregarProducto(props) {
       discountPercentage: discountPercentageInputValue,
       stock: stockInputValue,
     };
-    //props.setAllProducts([...props.allProducts, productToAdd])
-    props.setAllProducts((valorActualDelEstado) => {
-      //retornamos cual queremos que sea el nuevo valor del estado
+    //Hacemos que funcione el botón de editar
+    if (props.product) {
+      // si viene por props, es un edit
+      props.setAllProducts((products) => {
+        const index = products.findIndex(
+          (eachProduct) => eachProduct.id === props.product.id
+        );
+        products[index] = {
+          ...props.product,
+          ...productToAdd, // se sobrescribe la edición
+        };
+        return products;
+      });
+    } else {
+      //props.setAllProducts([...props.allProducts, productToAdd])
+      props.setAllProducts((valorActualDelEstado) => {
+        //retornamos cual queremos que sea el nuevo valor del estado
 
-      let nuevoValorDelEstado = [productToAdd,...valorActualDelEstado];
-      return nuevoValorDelEstado;
-    });
+        let nuevoValorDelEstado = [productToAdd, ...valorActualDelEstado];
+        return nuevoValorDelEstado;
+      });
+    }
   };
 
   return (
@@ -116,10 +143,16 @@ function AgregarProducto(props) {
             value={stockInputValue}
           />
         </div>
-        {/*if props.product */}
-        {/*botones editar y cancelar, editar actualiza elemento y cancelar vuelve al dashboard por ejemplo, ¿cómo se hace esto? ahhh sorpresa...*/}
-        {/*else*/}
-        <button type="submit" className="add-button">Add</button>
+
+        {!props.product ? (
+          <button type="submit" className="add-button">
+            Add
+          </button>
+        ) : (
+          <button type="submit" className="add-button">
+            Edit
+          </button>
+        )}
         {/* end IF */}
       </form>
     </div>
