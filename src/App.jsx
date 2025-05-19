@@ -14,6 +14,7 @@ import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import productsData from "./data/Myproductdata.json";
+import AgregarProducto from "./components/AgregarProducto";
 
 function App() {
   const [allProducts, setAllProducts] = useState(productsData);
@@ -34,6 +35,7 @@ function App() {
             }
           />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/components/AgregarProducto" elemt={<AgregarProducto />} />
           <Route path="/item-details/:id" element={<ItemDetailsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

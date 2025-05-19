@@ -48,7 +48,7 @@ function AgregarProducto(props) {
     props.setAllProducts((valorActualDelEstado) => {
       //retornamos cual queremos que sea el nuevo valor del estado
 
-      let nuevoValorDelEstado = [...valorActualDelEstado, productToAdd];
+      let nuevoValorDelEstado = [productToAdd,...valorActualDelEstado];
       return nuevoValorDelEstado;
     });
   };
@@ -118,7 +118,7 @@ function AgregarProducto(props) {
           />
         </div>
 
-        <button className="add-button">Add</button>
+        <button type="submit" className="add-button">Add</button>
       </form>
     </div>
   );
