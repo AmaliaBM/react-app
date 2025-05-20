@@ -15,6 +15,7 @@ import { useState } from "react";
 
 import productsData from "./data/Myproductdata.json";
 import ProductManagementPage from "./pages/ProductManagementPage";
+import ProductDetail from "./components/productDetail";
 
 function App() {
   const [allProducts, setAllProducts] = useState(productsData);
@@ -35,9 +36,24 @@ function App() {
             }
           />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/product-management" element={<ProductManagementPage setAllProducts={setAllProducts} />} />
-          <Route path="/item-details/:id" element={<ItemDetailsPage setAllProducts={setAllProducts} />} />
+          <Route
+            path="/product-management"
+            element={<ProductManagementPage setAllProducts={setAllProducts} />}
+          />
+          <Route
+            path="/edit-form/:id"
+            element={<ItemDetailsPage setAllProducts={setAllProducts} />}
+          />
           <Route path="*" element={<NotFoundPage />} />
+          <Route
+            path="/details/:id"
+            element={
+              <ProductDetail
+                productos={allProducts}
+                setAllProducts={setAllProducts}
+              />
+            }
+          />
         </Routes>
       </div>
       <Footer />

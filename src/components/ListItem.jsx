@@ -38,9 +38,11 @@ function ListItem({ producto, onDelete }) {
         <button className="action-button" onClick={onDelete}>
           Eliminar
         </button>
-        <Link to={`/item-details/${producto.id}`}>
+        <Link to={`/edit-form/${producto.id}`}>
           <button className="action-button">Editar</button>{" "}
-          {/*BOTÓN DE EDITAR PRODUCTOS*/}
+        </Link>
+        <Link to={`/details/${producto.id}`}>
+          <button className="action-details">Detalles</button>{" "}
         </Link>
       </div>
     </li>
