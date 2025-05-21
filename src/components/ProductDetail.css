@@ -1,0 +1,21 @@
+.container-details {
+    display: flex;
+    gap:5px;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.reseñas-usuarios {
+    text-align:center;
+    margin: 15px;
+    list-style-type:none;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.imagen-producto {
+    width: 120px;
+}

@@ -16,11 +16,29 @@
     flex-direction: column;
     gap: 3px;
 }
-
+.delete-button{
+    border: 1px solid black;
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    text-decoration: none;
+    background-color: rgb(246, 108, 108);
+}
 .action-button { 
     border: 1px solid black;
     display: flex;
     width: fit-content;
     padding: 5px;
+    text-decoration: none;
     background-color: rgb(116, 209, 245);
+}
+
+.action-details{
+    border: 1px solid black;
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    text-decoration: none;
+    background-color: rgb(116, 209, 245);
+    
 }

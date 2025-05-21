@@ -35,7 +35,7 @@ function ListItem({ producto, onDelete }) {
         {/*condicional booleano */}
         <br />
         {/*Añade separación entre elementos de una lista, es un elemento HTML que se utiliza para crear un salto de línea en el texto. Esencialmente, hace que el texto se desplace a la siguiente línea, como si se presionara la tecla Enter en un editor de texto */}
-        <button className="action-button" onClick={onDelete}>
+        <button className="delete-button" onClick={onDelete}>
           Eliminar
         </button>
         <Link to={`/edit-form/${producto.id}`}>
