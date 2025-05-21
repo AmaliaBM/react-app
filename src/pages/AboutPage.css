@@ -10,10 +10,15 @@
     padding: 10px;
     gap: 12px;
 }
-
+.container-info{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
 .members {
     display: flex;
     gap: 12px;
+    margin-left: 60px;
 }
 
 .member-image{

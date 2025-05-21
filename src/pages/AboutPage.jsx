@@ -4,7 +4,7 @@ import "./AboutPage.css";
 function AboutPage() {
   return (
     <div className="container">
-      <div>
+      <div className="container-info">
         <h3>COMPANY TAGLINE</h3>
         <p>
           Este proyecto está basado en una página que ofrezca una lista de
